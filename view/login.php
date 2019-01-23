@@ -1,6 +1,11 @@
 <div class="container">
     <div class="row align-items-center h-100">
         <div class="col-md-6 offset-md-3">
+            <?php if (isset($greska)) { ?>
+                <div class="alert alert-danger">
+                    <?php print($greska);?>
+                </div>
+            <?php } ?>
             <form method="POST" action="index.php?controller=login&action=login">
                 <div class="form-group">
                     <label for="korisnicko_ime">Korisničko ime</label>
