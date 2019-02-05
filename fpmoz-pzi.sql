@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 23, 2019 at 05:54 PM
+-- Generation Time: Feb 05, 2019 at 10:23 AM
 -- Server version: 5.7.24-0ubuntu0.18.04.1
 -- PHP Version: 7.2.11-4+ubuntu16.04.1+deb.sury.org+1
 
@@ -42,6 +42,19 @@ CREATE TABLE `korisnik` (
 INSERT INTO `korisnik` (`id`, `ime`, `prezime`, `korisnicko_ime`, `jmbg`, `lozinka`) VALUES
 (1, 'Daniel', 'Vasic', 'dvasic', '1233456789123', '123456');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `proizvod`
+--
+
+CREATE TABLE `proizvod` (
+  `id` int(11) NOT NULL,
+  `naziv` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `cijena` float NOT NULL,
+  `slika` varchar(1000) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -53,6 +66,12 @@ ALTER TABLE `korisnik`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `proizvod`
+--
+ALTER TABLE `proizvod`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -61,6 +80,11 @@ ALTER TABLE `korisnik`
 --
 ALTER TABLE `korisnik`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `proizvod`
+--
+ALTER TABLE `proizvod`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
