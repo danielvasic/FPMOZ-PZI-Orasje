@@ -1,5 +1,4 @@
 <?php
-session_start();
 function index ($data=array()) {
     load_view('login', $data);
 }
